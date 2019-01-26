@@ -1,0 +1,26 @@
+image: node:10
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+before_script:
+  - node --version
+  - yarn --version
+  - yarn
+
+lint:
+  only:
+    - master
+  script:
+    - yarn lint
+
+test:
+  environment:
+    name: codecov
+  only:
+    - master
+  script:
+    - yarn test
+    - npx codecov

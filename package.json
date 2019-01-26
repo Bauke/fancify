@@ -1,0 +1,26 @@
+{
+  "name": "fancify",
+  "version": "1.0.0",
+  "main": "lib/main.js",
+  "author": "Bauke <me@bauke.xyz>",
+  "repository": "https://gitlab.com/Bauke/fancify",
+  "homepage": "https://gitlab.com/Bauke/fancify/blob/master/README.md",
+  "license": "MIT",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tslint -p tsconfig.json",
+    "test": "tsc && nyc ava"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "ava": "^1.1.0",
+    "codecov": "^3.1.0",
+    "eslint": "^5.12.1",
+    "nyc": "^13.1.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  }
+}
