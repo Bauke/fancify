@@ -21,6 +21,7 @@ test(outputMacro, { input: '0aA', set: 'circled' }, '⓪ⓐⒶ');
 test(outputMacro, { input: '1bB', set: 'negative circled' }, '❶b🅑');
 test(outputMacro, { input: '2cC', set: 'fullwidth' }, '２ｃＣ');
 test(outputMacro, { input: '3dD', set: 'math bold' }, '𝟑𝐝𝐃');
+test(outputMacro, { input: '4eE', set: 'math bold fraktur' }, '4𝖊𝕰');
 
 /*
   ███████╗██████╗ ██████╗  ██████╗ ██████╗ ███████╗
