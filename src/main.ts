@@ -3,11 +3,10 @@ import { join } from 'path';
 
 export interface IFancifyOptions {
   input: string;
-  set: 'circled'|'negative circled'|'fullwidth'|'math bold'|'math bold fraktur';
-  // 'math bold italic'|'math bold script'|
-  // 'math double struck'|'math mono'|'math sans'|'math sans bold'|
-  // 'math sans bold italic'|'math sans italic'|'parenthesized'|
-  // 'regional indicator'|'squared'|'negative squared'|'small caps'|
+  set: 'circled'|'negative circled'|'fullwidth'|'math bold'|'math bold fraktur'
+    |'math bold italic'|'math bold script'|'math double struck'|'math mono'
+    |'math sans'|'math sans bold'|'math sans italic'|'math sans bold italic';
+  // |'parenthesized'|'regional indicator'|'squared'|'negative squared'|'small caps'|
   // 'stroked'|'inverted';
 }
 
