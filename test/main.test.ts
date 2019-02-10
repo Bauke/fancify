@@ -30,6 +30,10 @@ test(outputMacro, { input: 'Math Sans 123', set: 'math sans' }, '𝖬𝖺𝗍�
 test(outputMacro, { input: 'Math Sans Bold 123', set: 'math sans bold' }, '𝗠𝗮𝘁𝗵 𝗦𝗮𝗻𝘀 𝗕𝗼𝗹𝗱 𝟭𝟮𝟯');
 test(outputMacro, { input: 'Math Sans Italic 123', set: 'math sans italic' }, '𝘔𝘢𝘵𝘩 𝘚𝘢𝘯𝘴 𝘐𝘵𝘢𝘭𝘪𝘤 123');
 test(outputMacro, { input: 'Math Sans Bold Italic 123', set: 'math sans bold italic' }, '𝙈𝙖𝙩𝙝 𝙎𝙖𝙣𝙨 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘 123');
+test(outputMacro, { input: 'Parenthesized 123', set: 'parenthesized' }, '🄟⒜⒭⒠⒩⒯⒣⒠⒮⒤⒵⒠⒟ 123');
+test(outputMacro, { input: 'Regional Indicator 123', set: 'regional indicator' }, '🇷egional 🇮ndicator 123');
+test(outputMacro, { input: 'Squared 123', set: 'squared' }, '🅂quared 123');
+test(outputMacro, { input: 'Negative Squared 123', set: 'negative squared' }, '🅽egative 🆂quared 123');
 
 /*
   ███████╗██████╗ ██████╗  ██████╗ ██████╗ ███████╗

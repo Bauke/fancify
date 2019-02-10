@@ -62,15 +62,10 @@ These sets are implemented and can be used. Note that some sets don't have parti
 | `math sans bold` | All | Math Sans Bold 123 | 𝗠𝗮𝘁𝗵 𝗦𝗮𝗻𝘀 𝗕𝗼𝗹𝗱 𝟭𝟮𝟯 |
 | `math sans italic` | Upper & Lower | Math Sans Italic 123 | 𝘔𝘢𝘵𝘩 𝘚𝘢𝘯𝘴 𝘐𝘵𝘢𝘭𝘪𝘤 123 |
 | `math sans bold italic` | Upper & Lower | Math Sans Bold Italic 123 | 𝙈𝙖𝙩𝙝 𝙎𝙖𝙣𝙨 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘 123 |
-
-### Left To Do
-
-This list of sets are the ones left to be done, if you'd like any added that aren't listed here please [make an issue for it](https://gitlab.com/Bauke/fancify/issues) and/or submit a merge request if possible.
-
-```typescript
-  // |'parenthesized'|'regional indicator'|'squared'|'negative squared'|'small caps'|
-  // 'stroked'|'inverted';
-```
+| `parenthesized` | Upper & Lower | Parenthesized 123 | 🄟⒜⒭⒠⒩⒯⒣⒠⒮⒤⒵⒠⒟ 123 |
+| `regional indicator` | Upper | Regional Indicator 123 | 🇷egional 🇮ndicator 123 |
+| `squared` | Upper | Squared 123 | 🅂quared 123 |
+| `negative squared` | Upper | Negative Squared 123 | 🅽egative 🆂quared 123 |
 
 ## License
 
