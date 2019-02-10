@@ -9,7 +9,7 @@ import test, { ExecutionContext, Macro } from 'ava';
   ██║   ██║██║   ██║   ██║   ██╔═══╝ ██║   ██║   ██║
   ╚██████╔╝╚██████╔╝   ██║   ██║     ╚██████╔╝   ██║
    ╚═════╝  ╚═════╝    ╚═╝   ╚═╝      ╚═════╝    ╚═╝
-*/ // Tests all possible sets with the previews from the README
+*/ // Tests all possible sets
 const outputMacro: Macro<[IFancifyOptions, string]> = (t: ExecutionContext, input: IFancifyOptions, expected: string) => {
   const actual: string = fancify(input);
   t.is(actual, expected);
@@ -17,23 +17,30 @@ const outputMacro: Macro<[IFancifyOptions, string]> = (t: ExecutionContext, inpu
 
 outputMacro.title = (providedTitle, input, expected) => `output -> ${JSON.stringify(input)} = ${expected}`.trim();
 
-test(outputMacro, { input: 'Circled 123', set: 'circled' }, 'Ⓒⓘⓡⓒⓛⓔⓓ ①②③');
-test(outputMacro, { input: 'Negative Circled 123', set: 'negative circled' }, '🅝egative 🅒ircled ❶❷❸');
-test(outputMacro, { input: 'Full Width 123', set: 'fullwidth' }, 'Ｆｕｌｌ Ｗｉｄｔｈ １２３');
-test(outputMacro, { input: 'Math Bold 123', set: 'math bold' }, '𝐌𝐚𝐭𝐡 𝐁𝐨𝐥𝐝 𝟏𝟐𝟑');
-test(outputMacro, { input: 'Math Bold Fraktur 123', set: 'math bold fraktur' }, '𝕸𝖆𝖙𝖍 𝕭𝖔𝖑𝖉 𝕱𝖗𝖆𝖐𝖙𝖚𝖗 123');
-test(outputMacro, { input: 'Math Bold Italic 123', set: 'math bold italic' }, '𝑴𝒂𝒕𝒉 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄 123');
-test(outputMacro, { input: 'Math Bold Script 123', set: 'math bold script' }, '𝓜𝓪𝓽𝓱 𝓑𝓸𝓵𝓭 𝓢𝓬𝓻𝓲𝓹𝓽 123');
-test(outputMacro, { input: 'Math Double Struck 123', set: 'math double struck' }, 'M𝕒𝕥𝕙 D𝕠𝕦𝕓𝕝𝕖 S𝕥𝕣𝕦𝕔𝕜 𝟙𝟚𝟛');
-test(outputMacro, { input: 'Math Mono 123', set: 'math mono' }, '𝙼𝚊𝚝𝚑 𝙼𝚘𝚗𝚘 𝟷𝟸𝟹');
-test(outputMacro, { input: 'Math Sans 123', set: 'math sans' }, '𝖬𝖺𝗍𝗁 𝖲𝖺𝗇𝗌 𝟣𝟤𝟥');
-test(outputMacro, { input: 'Math Sans Bold 123', set: 'math sans bold' }, '𝗠𝗮𝘁𝗵 𝗦𝗮𝗻𝘀 𝗕𝗼𝗹𝗱 𝟭𝟮𝟯');
-test(outputMacro, { input: 'Math Sans Italic 123', set: 'math sans italic' }, '𝘔𝘢𝘵𝘩 𝘚𝘢𝘯𝘴 𝘐𝘵𝘢𝘭𝘪𝘤 123');
-test(outputMacro, { input: 'Math Sans Bold Italic 123', set: 'math sans bold italic' }, '𝙈𝙖𝙩𝙝 𝙎𝙖𝙣𝙨 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘 123');
-test(outputMacro, { input: 'Parenthesized 123', set: 'parenthesized' }, '🄟⒜⒭⒠⒩⒯⒣⒠⒮⒤⒵⒠⒟ 123');
-test(outputMacro, { input: 'Regional Indicator 123', set: 'regional indicator' }, '🇷egional 🇮ndicator 123');
-test(outputMacro, { input: 'Squared 123', set: 'squared' }, '🅂quared 123');
-test(outputMacro, { input: 'Negative Squared 123', set: 'negative squared' }, '🅽egative 🆂quared 123');
+const alphabet: string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+const outputTests: Array<{ expected: string; opts: IFancifyOptions; }> = [
+  { expected: 'ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ⓪①②③④⑤⑥⑦⑧⑨', opts: { input: alphabet, set: 'circled' }},
+  { expected: 'abcdefghijklmnopqrstuvwxyz🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩⓿❶❷❸❹❺❻❼❽❾', opts: { input: alphabet, set: 'negative circled' }},
+  { expected: 'ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ０１２３４５６７８９', opts: { input: alphabet, set: 'fullwidth' }},
+  { expected: '𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗', opts: { input: alphabet, set: 'math bold' }},
+  { expected: '𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅0123456789', opts: { input: alphabet, set: 'math bold fraktur' }},
+  { expected: '𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁0123456789', opts: { input: alphabet, set: 'math bold italic' }},
+  { expected: '𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩0123456789', opts: { input: alphabet, set: 'math bold script' }},
+  { expected: '𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫ABCDEFGHIJKLMNOPQRSTUVWXYZ𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡', opts: { input: alphabet, set: 'math double struck' }},
+  { expected: '𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿', opts: { input: alphabet, set: 'math mono' }},
+  { expected: '𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫', opts: { input: alphabet, set: 'math sans' }},
+  { expected: '𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵', opts: { input: alphabet, set: 'math sans bold' }},
+  { expected: '𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡0123456789', opts: { input: alphabet, set: 'math sans italic' }},
+  { expected: '𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕0123456789', opts: { input: alphabet, set: 'math sans bold italic' }},
+  { expected: '⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧🄨🄩0123456789', opts: { input: alphabet, set: 'parenthesized' }},
+  { expected: 'abcdefghijklmnopqrstuvwxyz🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿0123456789', opts: { input: alphabet, set: 'regional indicator' }},
+  { expected: 'abcdefghijklmnopqrstuvwxyz🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉0123456789', opts: { input: alphabet, set: 'squared' }},
+  { expected: 'abcdefghijklmnopqrstuvwxyz🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉0123456789', opts: { input: alphabet, set: 'negative squared' }},
+];
+
+for (const outputTest of outputTests) {
+  test(outputMacro, outputTest.opts, outputTest.expected);
+}
 
 /*
   ███████╗██████╗ ██████╗  ██████╗ ██████╗ ███████╗
