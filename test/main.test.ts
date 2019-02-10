@@ -1,4 +1,4 @@
-import fancify, { IFancifyOptions } from '../lib/main';
+import fancify, { IFancifyOptions } from '..';
 
 import test, { ExecutionContext, Macro } from 'ava';
 
