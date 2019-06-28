@@ -1,9 +1,9 @@
 export default {
   compileEnhancements: false,
   extensions: [
-    'ts',
+    'ts'
   ],
   require: [
-    'ts-node/register',
-  ],
+    'ts-node/register'
+  ]
 };
