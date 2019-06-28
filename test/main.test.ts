@@ -1,5 +1,5 @@
 import test, {ExecutionContext, Macro} from 'ava';
-import fancify, {FancifyOptions} from '..';
+import fancify, {FancifyOptions} from '../src/main';
 
 /*
    ██████╗ ██╗   ██╗████████╗██████╗ ██╗   ██╗████████╗
