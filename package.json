@@ -1,6 +1,6 @@
 {
   "name": "fancify",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Bauke <me@bauke.xyz>",
   "repository": "https://gitlab.com/Bauke/fancify",
   "license": "MIT",
@@ -50,7 +50,7 @@
       "@typescript-eslint/indent": [
         "error",
         2,
-        { 
+        {
           "SwitchCase": 1
         }
       ],
