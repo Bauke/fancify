@@ -10,12 +10,6 @@ before_script:
   - yarn --version
   - yarn
 
-lint:
-  only:
-    - master
-  script:
-    - yarn lint
-
 test:
   environment:
     name: codecov

@@ -3,8 +3,7 @@
     ".ts"
   ],
   "include": [
-    "src/**",
-    "lib/**"
+    "src/**"
   ],
   "reporter": [
     "html",

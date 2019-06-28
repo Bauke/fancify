@@ -75,3 +75,6 @@ jspm_packages/
 
 # DynamoDB Local files
 .dynamodb/
+
+# TypeScript output
+build/

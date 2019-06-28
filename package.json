@@ -1,26 +1,51 @@
 {
   "name": "fancify",
   "version": "1.2.0",
-  "main": "lib/main.js",
   "author": "Bauke <me@bauke.xyz>",
   "repository": "https://gitlab.com/Bauke/fancify",
-  "homepage": "https://gitlab.com/Bauke/fancify/blob/master/README.md",
   "license": "MIT",
-  "types": "lib/main.d.ts",
+  "main": "build/main.js",
+  "types": "build/main.d.ts",
+  "files": [
+    "build/",
+    "characters.json"
+  ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "lint": "tslint -p tsconfig.json",
-    "test": "tsc && nyc ava"
+    "build": "tsc",
+    "test": "yarn build && xo && nyc ava"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^10.12.18",
-    "ava": "^1.1.0",
-    "codecov": "^3.1.0",
-    "eslint": "^5.12.1",
-    "nyc": "^13.1.0",
-    "ts-node": "^8.0.2",
-    "tslint": "^5.12.1",
-    "typescript": "^3.2.4"
+    "@types/node": "^12.0.10",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "ava": "^2.1.0",
+    "codecov": "^3.5.0",
+    "eslint": "^5.",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-config-xo-typescript": "^0.15.0",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "extends": "xo-typescript",
+    "extensions": [
+      "ts"
+    ],
+    "ignores": [
+      "build/**"
+    ],
+    "rules": {
+      "@typescript-eslint/indent": [
+        "error",
+        2,
+        { 
+          "SwitchCase": 1
+        }
+      ],
+      "capitalized-comments": "off"
+    }
   }
 }
