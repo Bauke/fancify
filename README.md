@@ -1,10 +1,12 @@
+<img src="images/fancify.png" align="right">
+
 # Fancify
 
 > Convert letters and numbers to fancy Unicode ones.
 
-[![version](https://img.shields.io/npm/v/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify)
-[![downloads](https://img.shields.io/npm/dm/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify)
-[![coverage](https://img.shields.io/codecov/c/gitlab/bauke/fancify.svg?style=flat-square)](https://codecov.io/gl/Bauke/fancify)
+---
+
+[![version](https://img.shields.io/npm/v/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify) [![downloads](https://img.shields.io/npm/dm/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify) [![coverage](https://img.shields.io/codecov/c/gitlab/bauke/fancify.svg?style=flat-square)](https://codecov.io/gl/Bauke/fancify)
 
 ## Importing
 
