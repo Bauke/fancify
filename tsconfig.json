@@ -5,13 +5,14 @@
     "module": "commonjs",
     "outDir": "build/",
     "sourceMap": true,
-    "rootDir": "src/",
-    "target": "es2017",
+    "target": "es2017"
   },
   "include": [
-    "src/*.ts"
+    "src/*.ts",
+    "test/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules/",
+    "build/"
   ]
 }
