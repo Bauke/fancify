@@ -23,7 +23,7 @@ codecov:
   environment:
     name: codecov
   only:
-    - master@bauke/fancify
+    - master@Bauke/fancify
   script:
     - yarn codecov
   dependencies:
