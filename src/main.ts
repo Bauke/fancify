@@ -107,7 +107,7 @@ export default function fancify(options: FancifyOptions): string {
   // Iterate through the characters
   for (const char of characters) {
     // When the character is in the output at least once and the set has a replacement for it...
-    if (output.includes(char.char) && char[options.set]) {
+    if (output.includes(char.char) && typeof char[options.set] !== 'undefined') {
       // ... Replace it (and any others) with the replacement character
       const regex = new RegExp(char.char, 'g');
       output = output.replace(regex, String.fromCodePoint(parseInt(char[options.set], 16)));
