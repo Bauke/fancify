@@ -1,7 +1,7 @@
 {
   "name": "fancify",
   "description": "Convert letters and numbers to fancy Unicode ones.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Bauke <me@bauke.xyz>",
   "repository": "https://gitlab.com/Bauke/fancify",
   "license": "MIT",
