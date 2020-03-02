@@ -1,16 +1,16 @@
-image: node:10
-
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-  - node_modules/
-
-before_script:
-  - node --version
-  - yarn --version
-  - yarn
+.common:
+  image: node:12
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  before_script:
+    - node --version
+    - yarn --version
+    - yarn
 
 test:
+  extends: .common
   stage: test
   script:
     - yarn test
@@ -19,9 +19,8 @@ test:
       - coverage/lcov.info
 
 codecov:
+  extends: .common
   stage: deploy
-  environment:
-    name: codecov
   only:
     - master@Bauke/fancify
   script:

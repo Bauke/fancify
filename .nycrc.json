@@ -3,7 +3,7 @@
     ".ts"
   ],
   "include": [
-    "src/**"
+    "source/**"
   ],
   "reporter": [
     "html",

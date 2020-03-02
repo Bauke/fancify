@@ -1,53 +1,23 @@
-<img src="images/fancify.png" align="right">
-
 # Fancify
 
 > Convert letters and numbers to fancy Unicode ones.
 
----
-
-[![version](https://img.shields.io/npm/v/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify) [![downloads](https://img.shields.io/npm/dm/fancify.svg?style=flat-square)](https://npmjs.com/package/fancify) [![coverage](https://img.shields.io/codecov/c/gitlab/bauke/fancify.svg?style=flat-square)](https://codecov.io/gl/Bauke/fancify)
-
-## Importing
-
-### JavaScript
-
-`fancify` is exported as default.
-
-```javascript
-// ES6 Imports:
-import fancify from 'fancify';
-
-// or using require:
-const fancify = require('fancify').default;
-```
-
-### TypeScript
-
-```typescript
-// ES6 imports:
-import fancify from 'fancify';
-
-// and if you also want the IFancifyOptions interface:
-import fancify, { IFancifyOptions } from 'fancify';
-```
-
 ## Usage
 
-For a full list of sets, [see sets](#sets).
+For a full list of sets, [see Sets](#sets).
 
 ```typescript
+import fancify from 'fancify';
+
 fancify({ input: 'fancify THIS 1', set: 'circled' });
 // 'ⓕⓐⓝⓒⓘⓕⓨ ⓉⒽⒾⓈ ①'
 ```
 
 ## Sets
 
-### Implemented
-
 Only alphanumerical characters will be converted (`/[a-zA-Z0-9]/`).
 
-These sets are implemented and can be used. Note that some sets don't have particular variants because they're not in Unicode and are noted below.
+Note: some sets don't have particular variants because they're not in Unicode. The variants that are available are noted below in the table.
 
 | Name | Variants | Input | Output |
 |------|----------|-------|--------|
@@ -71,4 +41,4 @@ These sets are implemented and can be used. Note that some sets don't have parti
 
 ## License
 
-Licensed under [MIT](https://gitlab.com/Bauke/fancify/blob/master/LICENSE).
+Licensed under [MIT](License).
