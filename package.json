@@ -1,7 +1,7 @@
 {
   "name": "fancify",
   "description": "Convert letters and numbers to fancy Unicode ones.",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "author": "Bauke <me@bauke.xyz>",
   "repository": "https://gitlab.com/Bauke/fancify",
   "license": "MIT",
@@ -16,14 +16,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "ava": "^3.5.0",
-    "codecov": "^3.6.5",
-    "nyc": "^15.0.0",
+    "@types/node": "^14.0.20",
+    "ava": "^3.10.1",
+    "codecov": "^3.7.0",
+    "nyc": "^15.1.0",
     "trash-cli": "^3.0.0",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.8.3",
-    "xo": "^0.27.2"
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6",
+    "xo": "^0.32.1"
   },
   "ava": {
     "extensions": [

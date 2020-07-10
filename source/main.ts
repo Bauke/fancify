@@ -1107,7 +1107,7 @@ export default function fancify(options: FancifyOptions): string {
       const regex = new RegExp(char.char, 'g');
       output = output.replace(
         regex,
-        String.fromCodePoint(parseInt(char[options.set]!, 16))
+        String.fromCodePoint(Number.parseInt(char[options.set]!, 16))
       );
     }
   }

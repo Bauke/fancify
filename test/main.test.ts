@@ -117,7 +117,7 @@ test('errors -> null set throws error', (t: ExecutionContext) => {
 
 test('errors -> empty set throws error', (t: ExecutionContext) => {
   // Ignore a TypeScript error stating "set" has to be a specific string
-  // @ts-ignore
+  // @ts-expect-error
   const options: FancifyOptions = {input: 'a', set: ''};
   const actual: Error = t.throws(() => fancify(options));
   const expected: Error = new Error('"set" cannot be empty');

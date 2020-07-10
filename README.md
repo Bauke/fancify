@@ -41,4 +41,4 @@ Note: some sets don't have particular variants because they're not in Unicode. T
 
 ## License
 
-Licensed under [MIT](License).
+Licensed under [MIT](LICENSE).
