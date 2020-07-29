@@ -1,26 +1,23 @@
 {
   "name": "fancify",
   "description": "Convert letters and numbers to fancy Unicode ones.",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "author": "Bauke <me@bauke.xyz>",
-  "repository": "https://gitlab.com/Bauke/fancify",
+  "homepage": "https://git.holllo.cc/Bauke/fancify",
   "license": "MIT",
-  "main": "build/source/main.js",
-  "types": "build/source/main.d.ts",
+  "main": "build/source/index.js",
+  "types": "build/source/index.d.ts",
   "files": [
     "build/source/"
   ],
   "scripts": {
     "build": "tsc",
-    "test": "xo && nyc ava"
+    "test": "xo && ava --verbose",
+    "prepublishOnly": "rm -rf build/ && yarn build && yarn test"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.0.20",
     "ava": "^3.10.1",
-    "codecov": "^3.7.0",
-    "nyc": "^15.1.0",
-    "trash-cli": "^3.0.0",
+    "husky": "^4.2.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6",
     "xo": "^0.32.1"
@@ -30,20 +27,23 @@
       "ts"
     ],
     "files": [
-      "test/*.test.ts"
+      "tests/*.test.ts"
     ],
     "require": [
       "ts-node/register"
     ]
   },
   "xo": {
-    "ignores": [
-      "build/**"
-    ],
     "prettier": true,
     "rules": {
       "capitalized-comments": "off"
     },
     "space": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
   }
 }

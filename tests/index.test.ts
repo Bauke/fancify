@@ -1,5 +1,5 @@
 import test, {ExecutionContext, Macro} from 'ava';
-import fancify, {FancifyOptions} from '../source/main';
+import fancify, {FancifyOptions} from '../source';
 
 // Tests all possible sets
 const outputMacro: Macro<[FancifyOptions, string]> = (
