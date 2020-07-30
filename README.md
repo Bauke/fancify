@@ -2,9 +2,9 @@
 
 > Convert letters and numbers to fancy Unicode ones.
 
-[![npm version](https://img.shields.io/npm/v/fancify?color=blue&style=flat-square)](https://npmjs.com/package/owofy)
-[![npm downloads per month](https://img.shields.io/npm/dm/fancify?color=blue&style=flat-square)](https://npmjs.com/package/owofy)
-[![npm license](https://img.shields.io/npm/l/fancify?color=blue&style=flat-square)](https://npmjs.com/package/owofy)
+[![npm version](https://img.shields.io/npm/v/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
+[![npm downloads per month](https://img.shields.io/npm/dm/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
+[![npm license](https://img.shields.io/npm/l/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
 
 ## Usage
 
