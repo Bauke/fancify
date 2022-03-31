@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "module": "commonjs",
-    "outDir": "build/",
+    "esModuleInterop": true,
+    "module": "ES2020",
+    "moduleResolution": "Node",
+    "outDir": "build",
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "ES2020"
   },
   "include": [
-    "source/*.ts",
-    "tests/*.ts"
-  ],
-  "exclude": [
-    "node_modules/",
-    "build/"
+    "source/**/*.ts",
+    "tests/**/*.ts"
   ]
 }

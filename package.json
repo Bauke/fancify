@@ -5,6 +5,7 @@
   "author": "Bauke <me@bauke.xyz>",
   "homepage": "https://git.holllo.cc/Bauke/fancify",
   "license": "MIT",
+  "type": "module",
   "main": "build/source/index.js",
   "types": "build/source/index.d.ts",
   "files": [
@@ -22,14 +23,15 @@
     "xo": "^0.48.0"
   },
   "ava": {
-    "extensions": [
-      "ts"
-    ],
+    "extensions": {
+      "ts": "module"
+    },
     "files": [
-      "tests/*.test.ts"
+      "tests/**/*.test.ts"
     ],
-    "require": [
-      "ts-node/register"
+    "nodeArguments": [
+      "--no-warnings",
+      "--loader=ts-node/esm"
     ]
   },
   "xo": {
