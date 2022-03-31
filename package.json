@@ -3,7 +3,11 @@
   "description": "Convert letters and numbers to fancy Unicode ones.",
   "version": "1.2.7",
   "author": "Bauke <me@bauke.xyz>",
-  "homepage": "https://git.holllo.cc/Bauke/fancify",
+  "funding": "https://github.com/sponsors/Bauke",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bauke/fancify"
+  },
   "license": "MIT",
   "type": "module",
   "main": "build/source/index.js",
