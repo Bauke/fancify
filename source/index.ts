@@ -1,26 +1,23 @@
-export interface FancifyOptions {
-  input: string;
-  set:
-    | 'circled'
-    | 'negative circled'
-    | 'fullwidth'
-    | 'math bold'
-    | 'math bold fraktur'
-    | 'math bold italic'
-    | 'math bold script'
-    | 'math double struck'
-    | 'math mono'
-    | 'math sans'
-    | 'math sans bold'
-    | 'math sans italic'
-    | 'math sans bold italic'
-    | 'parenthesized'
-    | 'regional indicator'
-    | 'squared'
-    | 'negative squared';
-}
+export type FancifySet =
+  | 'circled'
+  | 'negative circled'
+  | 'fullwidth'
+  | 'math bold'
+  | 'math bold fraktur'
+  | 'math bold italic'
+  | 'math bold script'
+  | 'math double struck'
+  | 'math mono'
+  | 'math sans'
+  | 'math sans bold'
+  | 'math sans italic'
+  | 'math sans bold italic'
+  | 'parenthesized'
+  | 'regional indicator'
+  | 'squared'
+  | 'negative squared';
 
-export const sets: string[] = [
+export const sets: FancifySet[] = [
   'circled',
   'negative circled',
   'fullwidth',
@@ -37,7 +34,7 @@ export const sets: string[] = [
   'parenthesized',
   'regional indicator',
   'squared',
-  'negative squared'
+  'negative squared',
 ];
 
 export const characters: Array<{
@@ -69,7 +66,7 @@ export const characters: Array<{
     'math double struck': '1D7D8',
     'math mono': '1D7F6',
     'math sans': '1D7E2',
-    'math sans bold': '1D7EC'
+    'math sans bold': '1D7EC',
   },
   {
     char: '1',
@@ -80,7 +77,7 @@ export const characters: Array<{
     'math double struck': '1D7D9',
     'math mono': '1D7F7',
     'math sans': '1D7E3',
-    'math sans bold': '1D7ED'
+    'math sans bold': '1D7ED',
   },
   {
     char: '2',
@@ -91,7 +88,7 @@ export const characters: Array<{
     'math double struck': '1D7DA',
     'math mono': '1D7F8',
     'math sans': '1D7E4',
-    'math sans bold': '1D7EE'
+    'math sans bold': '1D7EE',
   },
   {
     char: '3',
@@ -102,7 +99,7 @@ export const characters: Array<{
     'math double struck': '1D7DB',
     'math mono': '1D7F9',
     'math sans': '1D7E5',
-    'math sans bold': '1D7EF'
+    'math sans bold': '1D7EF',
   },
   {
     char: '4',
@@ -113,7 +110,7 @@ export const characters: Array<{
     'math double struck': '1D7DC',
     'math mono': '1D7FA',
     'math sans': '1D7E6',
-    'math sans bold': '1D7F0'
+    'math sans bold': '1D7F0',
   },
   {
     char: '5',
@@ -124,7 +121,7 @@ export const characters: Array<{
     'math double struck': '1D7DD',
     'math mono': '1D7FB',
     'math sans': '1D7E7',
-    'math sans bold': '1D7F1'
+    'math sans bold': '1D7F1',
   },
   {
     char: '6',
@@ -135,7 +132,7 @@ export const characters: Array<{
     'math double struck': '1D7DE',
     'math mono': '1D7FC',
     'math sans': '1D7E8',
-    'math sans bold': '1D7F2'
+    'math sans bold': '1D7F2',
   },
   {
     char: '7',
@@ -146,7 +143,7 @@ export const characters: Array<{
     'math double struck': '1D7DF',
     'math mono': '1D7FD',
     'math sans': '1D7E9',
-    'math sans bold': '1D7F3'
+    'math sans bold': '1D7F3',
   },
   {
     char: '8',
@@ -157,7 +154,7 @@ export const characters: Array<{
     'math double struck': '1D7E0',
     'math mono': '1D7FE',
     'math sans': '1D7EA',
-    'math sans bold': '1D7F4'
+    'math sans bold': '1D7F4',
   },
   {
     char: '9',
@@ -168,7 +165,7 @@ export const characters: Array<{
     'math double struck': '1D7E1',
     'math mono': '1D7FF',
     'math sans': '1D7EB',
-    'math sans bold': '1D7F5'
+    'math sans bold': '1D7F5',
   },
   {
     char: 'A',
@@ -187,7 +184,7 @@ export const characters: Array<{
     parenthesized: '1F110',
     'regional indicator': '1F1E6',
     squared: '1F130',
-    'negative squared': '1F170'
+    'negative squared': '1F170',
   },
   {
     char: 'B',
@@ -206,7 +203,7 @@ export const characters: Array<{
     parenthesized: '1F111',
     'regional indicator': '1F1E7',
     squared: '1F131',
-    'negative squared': '1F171'
+    'negative squared': '1F171',
   },
   {
     char: 'C',
@@ -225,7 +222,7 @@ export const characters: Array<{
     parenthesized: '1F112',
     'regional indicator': '1F1E8',
     squared: '1F132',
-    'negative squared': '1F172'
+    'negative squared': '1F172',
   },
   {
     char: 'D',
@@ -244,7 +241,7 @@ export const characters: Array<{
     parenthesized: '1F113',
     'regional indicator': '1F1E9',
     squared: '1F133',
-    'negative squared': '1F173'
+    'negative squared': '1F173',
   },
   {
     char: 'E',
@@ -263,7 +260,7 @@ export const characters: Array<{
     parenthesized: '1F114',
     'regional indicator': '1F1EA',
     squared: '1F134',
-    'negative squared': '1F174'
+    'negative squared': '1F174',
   },
   {
     char: 'F',
@@ -282,7 +279,7 @@ export const characters: Array<{
     parenthesized: '1F115',
     'regional indicator': '1F1EB',
     squared: '1F135',
-    'negative squared': '1F175'
+    'negative squared': '1F175',
   },
   {
     char: 'G',
@@ -301,7 +298,7 @@ export const characters: Array<{
     parenthesized: '1F116',
     'regional indicator': '1F1EC',
     squared: '1F136',
-    'negative squared': '1F176'
+    'negative squared': '1F176',
   },
   {
     char: 'H',
@@ -320,7 +317,7 @@ export const characters: Array<{
     parenthesized: '1F117',
     'regional indicator': '1F1ED',
     squared: '1F137',
-    'negative squared': '1F177'
+    'negative squared': '1F177',
   },
   {
     char: 'I',
@@ -339,7 +336,7 @@ export const characters: Array<{
     parenthesized: '1F118',
     'regional indicator': '1F1EE',
     squared: '1F138',
-    'negative squared': '1F178'
+    'negative squared': '1F178',
   },
   {
     char: 'J',
@@ -358,7 +355,7 @@ export const characters: Array<{
     parenthesized: '1F119',
     'regional indicator': '1F1EF',
     squared: '1F139',
-    'negative squared': '1F179'
+    'negative squared': '1F179',
   },
   {
     char: 'K',
@@ -377,7 +374,7 @@ export const characters: Array<{
     parenthesized: '1F11A',
     'regional indicator': '1F1F0',
     squared: '1F13A',
-    'negative squared': '1F17A'
+    'negative squared': '1F17A',
   },
   {
     char: 'L',
@@ -396,7 +393,7 @@ export const characters: Array<{
     parenthesized: '1F11B',
     'regional indicator': '1F1F1',
     squared: '1F13B',
-    'negative squared': '1F17B'
+    'negative squared': '1F17B',
   },
   {
     char: 'M',
@@ -415,7 +412,7 @@ export const characters: Array<{
     parenthesized: '1F11C',
     'regional indicator': '1F1F2',
     squared: '1F13C',
-    'negative squared': '1F17C'
+    'negative squared': '1F17C',
   },
   {
     char: 'N',
@@ -434,7 +431,7 @@ export const characters: Array<{
     parenthesized: '1F11D',
     'regional indicator': '1F1F3',
     squared: '1F13D',
-    'negative squared': '1F17D'
+    'negative squared': '1F17D',
   },
   {
     char: 'O',
@@ -453,7 +450,7 @@ export const characters: Array<{
     parenthesized: '1F11E',
     'regional indicator': '1F1F4',
     squared: '1F13E',
-    'negative squared': '1F17E'
+    'negative squared': '1F17E',
   },
   {
     char: 'P',
@@ -472,7 +469,7 @@ export const characters: Array<{
     parenthesized: '1F11F',
     'regional indicator': '1F1F5',
     squared: '1F13F',
-    'negative squared': '1F17F'
+    'negative squared': '1F17F',
   },
   {
     char: 'Q',
@@ -491,7 +488,7 @@ export const characters: Array<{
     parenthesized: '1F120',
     'regional indicator': '1F1F6',
     squared: '1F140',
-    'negative squared': '1F180'
+    'negative squared': '1F180',
   },
   {
     char: 'R',
@@ -510,7 +507,7 @@ export const characters: Array<{
     parenthesized: '1F121',
     'regional indicator': '1F1F7',
     squared: '1F141',
-    'negative squared': '1F181'
+    'negative squared': '1F181',
   },
   {
     char: 'S',
@@ -529,7 +526,7 @@ export const characters: Array<{
     parenthesized: '1F122',
     'regional indicator': '1F1F8',
     squared: '1F142',
-    'negative squared': '1F182'
+    'negative squared': '1F182',
   },
   {
     char: 'T',
@@ -548,7 +545,7 @@ export const characters: Array<{
     parenthesized: '1F123',
     'regional indicator': '1F1F9',
     squared: '1F143',
-    'negative squared': '1F183'
+    'negative squared': '1F183',
   },
   {
     char: 'U',
@@ -567,7 +564,7 @@ export const characters: Array<{
     parenthesized: '1F124',
     'regional indicator': '1F1FA',
     squared: '1F144',
-    'negative squared': '1F184'
+    'negative squared': '1F184',
   },
   {
     char: 'V',
@@ -586,7 +583,7 @@ export const characters: Array<{
     parenthesized: '1F125',
     'regional indicator': '1F1FB',
     squared: '1F145',
-    'negative squared': '1F185'
+    'negative squared': '1F185',
   },
   {
     char: 'W',
@@ -605,7 +602,7 @@ export const characters: Array<{
     parenthesized: '1F126',
     'regional indicator': '1F1FC',
     squared: '1F146',
-    'negative squared': '1F186'
+    'negative squared': '1F186',
   },
   {
     char: 'X',
@@ -624,7 +621,7 @@ export const characters: Array<{
     parenthesized: '1F127',
     'regional indicator': '1F1FD',
     squared: '1F147',
-    'negative squared': '1F187'
+    'negative squared': '1F187',
   },
   {
     char: 'Y',
@@ -643,7 +640,7 @@ export const characters: Array<{
     parenthesized: '1F128',
     'regional indicator': '1F1FE',
     squared: '1F148',
-    'negative squared': '1F188'
+    'negative squared': '1F188',
   },
   {
     char: 'Z',
@@ -662,7 +659,7 @@ export const characters: Array<{
     parenthesized: '1F129',
     'regional indicator': '1F1FF',
     squared: '1F149',
-    'negative squared': '1F189'
+    'negative squared': '1F189',
   },
   {
     char: 'a',
@@ -678,7 +675,7 @@ export const characters: Array<{
     'math sans bold': '1D5EE',
     'math sans italic': '1D622',
     'math sans bold italic': '1D656',
-    parenthesized: '249C'
+    parenthesized: '249C',
   },
   {
     char: 'b',
@@ -694,7 +691,7 @@ export const characters: Array<{
     'math sans bold': '1D5EF',
     'math sans italic': '1D623',
     'math sans bold italic': '1D657',
-    parenthesized: '249D'
+    parenthesized: '249D',
   },
   {
     char: 'c',
@@ -710,7 +707,7 @@ export const characters: Array<{
     'math sans bold': '1D5F0',
     'math sans italic': '1D624',
     'math sans bold italic': '1D658',
-    parenthesized: '249E'
+    parenthesized: '249E',
   },
   {
     char: 'd',
@@ -726,7 +723,7 @@ export const characters: Array<{
     'math sans bold': '1D5F1',
     'math sans italic': '1D625',
     'math sans bold italic': '1D659',
-    parenthesized: '249F'
+    parenthesized: '249F',
   },
   {
     char: 'e',
@@ -742,7 +739,7 @@ export const characters: Array<{
     'math sans bold': '1D5F2',
     'math sans italic': '1D626',
     'math sans bold italic': '1D65A',
-    parenthesized: '24A0'
+    parenthesized: '24A0',
   },
   {
     char: 'f',
@@ -758,7 +755,7 @@ export const characters: Array<{
     'math sans bold': '1D5F3',
     'math sans italic': '1D627',
     'math sans bold italic': '1D65B',
-    parenthesized: '24A1'
+    parenthesized: '24A1',
   },
   {
     char: 'g',
@@ -774,7 +771,7 @@ export const characters: Array<{
     'math sans bold': '1D5F4',
     'math sans italic': '1D628',
     'math sans bold italic': '1D65C',
-    parenthesized: '24A2'
+    parenthesized: '24A2',
   },
   {
     char: 'h',
@@ -790,7 +787,7 @@ export const characters: Array<{
     'math sans bold': '1D5F5',
     'math sans italic': '1D629',
     'math sans bold italic': '1D65D',
-    parenthesized: '24A3'
+    parenthesized: '24A3',
   },
   {
     char: 'i',
@@ -806,7 +803,7 @@ export const characters: Array<{
     'math sans bold': '1D5F6',
     'math sans italic': '1D62A',
     'math sans bold italic': '1D65E',
-    parenthesized: '24A4'
+    parenthesized: '24A4',
   },
   {
     char: 'j',
@@ -822,7 +819,7 @@ export const characters: Array<{
     'math sans bold': '1D5F7',
     'math sans italic': '1D62B',
     'math sans bold italic': '1D65F',
-    parenthesized: '24A5'
+    parenthesized: '24A5',
   },
   {
     char: 'k',
@@ -838,7 +835,7 @@ export const characters: Array<{
     'math sans bold': '1D5F8',
     'math sans italic': '1D62C',
     'math sans bold italic': '1D660',
-    parenthesized: '24A6'
+    parenthesized: '24A6',
   },
   {
     char: 'l',
@@ -854,7 +851,7 @@ export const characters: Array<{
     'math sans bold': '1D5F9',
     'math sans italic': '1D62D',
     'math sans bold italic': '1D661',
-    parenthesized: '24A7'
+    parenthesized: '24A7',
   },
   {
     char: 'm',
@@ -870,7 +867,7 @@ export const characters: Array<{
     'math sans bold': '1D5FA',
     'math sans italic': '1D62E',
     'math sans bold italic': '1D662',
-    parenthesized: '24A8'
+    parenthesized: '24A8',
   },
   {
     char: 'n',
@@ -886,7 +883,7 @@ export const characters: Array<{
     'math sans bold': '1D5FB',
     'math sans italic': '1D62F',
     'math sans bold italic': '1D663',
-    parenthesized: '24A9'
+    parenthesized: '24A9',
   },
   {
     char: 'o',
@@ -902,7 +899,7 @@ export const characters: Array<{
     'math sans bold': '1D5FC',
     'math sans italic': '1D630',
     'math sans bold italic': '1D664',
-    parenthesized: '24AA'
+    parenthesized: '24AA',
   },
   {
     char: 'p',
@@ -918,7 +915,7 @@ export const characters: Array<{
     'math sans bold': '1D5FD',
     'math sans italic': '1D631',
     'math sans bold italic': '1D665',
-    parenthesized: '24AB'
+    parenthesized: '24AB',
   },
   {
     char: 'q',
@@ -934,7 +931,7 @@ export const characters: Array<{
     'math sans bold': '1D5FE',
     'math sans italic': '1D632',
     'math sans bold italic': '1D666',
-    parenthesized: '24AC'
+    parenthesized: '24AC',
   },
   {
     char: 'r',
@@ -950,7 +947,7 @@ export const characters: Array<{
     'math sans bold': '1D5FF',
     'math sans italic': '1D633',
     'math sans bold italic': '1D667',
-    parenthesized: '24AD'
+    parenthesized: '24AD',
   },
   {
     char: 's',
@@ -966,7 +963,7 @@ export const characters: Array<{
     'math sans bold': '1D600',
     'math sans italic': '1D634',
     'math sans bold italic': '1D668',
-    parenthesized: '24AE'
+    parenthesized: '24AE',
   },
   {
     char: 't',
@@ -982,7 +979,7 @@ export const characters: Array<{
     'math sans bold': '1D601',
     'math sans italic': '1D635',
     'math sans bold italic': '1D669',
-    parenthesized: '24AF'
+    parenthesized: '24AF',
   },
   {
     char: 'u',
@@ -998,7 +995,7 @@ export const characters: Array<{
     'math sans bold': '1D602',
     'math sans italic': '1D636',
     'math sans bold italic': '1D66A',
-    parenthesized: '24B0'
+    parenthesized: '24B0',
   },
   {
     char: 'v',
@@ -1014,7 +1011,7 @@ export const characters: Array<{
     'math sans bold': '1D603',
     'math sans italic': '1D637',
     'math sans bold italic': '1D66B',
-    parenthesized: '24B1'
+    parenthesized: '24B1',
   },
   {
     char: 'w',
@@ -1030,7 +1027,7 @@ export const characters: Array<{
     'math sans bold': '1D604',
     'math sans italic': '1D638',
     'math sans bold italic': '1D66C',
-    parenthesized: '24B2'
+    parenthesized: '24B2',
   },
   {
     char: 'x',
@@ -1046,7 +1043,7 @@ export const characters: Array<{
     'math sans bold': '1D605',
     'math sans italic': '1D639',
     'math sans bold italic': '1D66D',
-    parenthesized: '24B3'
+    parenthesized: '24B3',
   },
   {
     char: 'y',
@@ -1062,7 +1059,7 @@ export const characters: Array<{
     'math sans bold': '1D606',
     'math sans italic': '1D63A',
     'math sans bold italic': '1D66E',
-    parenthesized: '24B4'
+    parenthesized: '24B4',
   },
   {
     char: 'z',
@@ -1078,40 +1075,40 @@ export const characters: Array<{
     'math sans bold': '1D607',
     'math sans italic': '1D63B',
     'math sans bold italic': '1D66F',
-    parenthesized: '24B5'
-  }
+    parenthesized: '24B5',
+  },
 ];
 
-export default function fancify(options: FancifyOptions): string {
-  // Make sure the input is something we can change
-  if (options.input === null || options.input.length === 0) {
-    throw new Error('"input" cannot be empty');
+export default function fancify(input: string, set: FancifySet): string {
+  if (typeof input !== 'string') {
+    throw new TypeError('Typeof input must be "string"');
   }
 
-  // Make sure the specified set is something
-  if (options.set === null || options.set.length === 0) {
-    throw new Error('"set" cannot be empty');
+  if (typeof set !== 'string') {
+    throw new TypeError('Typeof set must be "string"');
   }
 
-  // Set the output to the specified input
-  let output: string = options.input;
+  if (!sets.includes(set)) {
+    throw new Error(`"${set}" is not a known set`);
+  }
 
-  // Iterate through the characters
+  let output = input;
+
   for (const char of characters) {
-    // When the character is in the output at least once and the set has a replacement for it...
-    if (
-      output.includes(char.char) &&
-      typeof char[options.set] !== 'undefined'
-    ) {
-      // ... Replace it (and any others) with the replacement character
+    if (!output.includes(char.char)) {
+      continue;
+    }
+
+    const replacement = char[set];
+
+    if (typeof replacement !== 'undefined') {
       const regex = new RegExp(char.char, 'g');
       output = output.replace(
         regex,
-        String.fromCodePoint(Number.parseInt(char[options.set]!, 16))
+        String.fromCodePoint(Number.parseInt(replacement, 16)),
       );
     }
   }
 
-  // Return the output after iterating
   return output;
 }
