@@ -2,18 +2,13 @@
 
 > Convert letters and numbers to fancy Unicode ones.
 
-[![npm version](https://img.shields.io/npm/v/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
-[![npm downloads per month](https://img.shields.io/npm/dm/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
-[![npm license](https://img.shields.io/npm/l/fancify?color=blue&style=flat-square)](https://npmjs.com/package/fancify)
-
 ## Usage
 
 ```typescript
 import fancify from 'fancify';
 
-console.log(fancify({ input: 'fancify THIS 1', set: 'circled' }));
-
 // 'ⓕⓐⓝⓒⓘⓕⓨ ⓉⒽⒾⓈ ①'
+fancify('fancify THIS 1', 'circled');
 ```
 
 For a full list of sets, expand the Sets section below.
