@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import fancify, {FancifySet, sets} from '../source/index.js';
 
 const alphabet =
