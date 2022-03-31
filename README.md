@@ -43,4 +43,4 @@ Note: some sets don't have particular variants because they're not in Unicode. T
 
 ## License
 
-Open-sourced with the [MIT License](https://git.holllo.cc/Bauke/fancify/src/branch/main/LICENSE).
+Open-sourced with the [MIT License](LICENSE).
